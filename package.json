@@ -1,6 +1,6 @@
 {
-  "name": "leo-dashboard",
-  "description": "GUI for leo-dashboard",
+  "name": "electron-kiosk",
+  "description": "Kiosk GUI for showing a web page",
   "version": "0.1.0",
   "author": {
     "name": "Dan de Zille"
