@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PWD="`dirname \"$0\"`"          # relative
+PWD="`( cd \"$PWD\" && pwd )`"  # absolutized and normalized
+
+docker run \
+  --rm \
+  -t \
+  -v $PWD/..:/src \
+  -v electron-build-node-modules:/src/node_modules \
+  -w /src \
+  arm32v7/node:latest \
+  /bin/bash -c "npm install --no-progress && npm run build"
